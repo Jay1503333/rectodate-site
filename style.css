@@ -2,7 +2,8 @@
   --paper: #F7F4EF;
   --ink: #1B1C1E;
   --muted: #5A5751;
-  --blue: #1565C0;
+  --accent: #B83D12;        /* the icon's orange, darkened for text contrast */
+  --accent-solid: #CA4418;  /* the icon's orange, for solid fills */
   --rule: #E2DCD1;
   --card: #FFFFFF;
 }
@@ -11,7 +12,8 @@
     --paper: #111315;
     --ink: #E3E2E0;
     --muted: #A9ADB1;
-    --blue: #9FC6FF;
+    --accent: #FF9A6E;
+    --accent-solid: #CA4418;
     --rule: #2C2F33;
     --card: #191C1F;
   }
@@ -31,7 +33,7 @@ header { padding: 56px 0 8px; }
   display: inline-flex; align-items: center; gap: 12px;
   text-decoration: none; color: inherit;
 }
-.mark svg { display: block; }
+.mark img { display: block; width: 34px; height: 34px; border-radius: 8px; }
 .mark b { font-size: 1.25rem; letter-spacing: -0.01em; }
 h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.02em; margin: 28px 0 6px; }
 h2 { font-size: 1.15rem; margin: 40px 0 8px; letter-spacing: -0.01em; }
@@ -47,7 +49,7 @@ h2 { font-size: 1.15rem; margin: 40px 0 8px; letter-spacing: -0.01em; }
 .lede p:last-child { margin-bottom: 0; }
 ul { padding-left: 1.25rem; }
 li { margin: 6px 0; }
-a { color: var(--blue); }
+a { color: var(--accent); }
 hr { border: 0; border-top: 1px solid var(--rule); margin: 48px 0 24px; }
 footer { color: var(--muted); font-size: 0.9rem; }
 code {
@@ -57,8 +59,8 @@ code {
 .note { color: var(--muted); font-size: 0.95rem; }
 .cta {
   display: inline-block; text-decoration: none;
-  background: var(--blue); color: var(--paper);
+  background: var(--accent-solid); color: #FBF7EB;
   padding: 12px 20px; border-radius: 999px; font-weight: 600;
   margin-top: 8px;
 }
-@media (prefers-color-scheme: dark) { .cta { color: #06182C; } }
+@media (prefers-color-scheme: dark) { .cta { color: #FBF7EB; } }
